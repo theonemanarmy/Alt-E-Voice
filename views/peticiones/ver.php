@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Petición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php while ($pet = $petitions->fetch_object()): ?>
+      <tr>
+        <th scope="row"><?= $pet->id ?></th>
+        <td>
+            <?= $pet->texto ?>
+        </td>
+        <td><a href="<?= url_project ?>peticiones/delete" class="btn btn-danger">Borrar</a></td>
+      </tr>
+    <?php endwhile; ?>
+  </tbody>
+</table>
