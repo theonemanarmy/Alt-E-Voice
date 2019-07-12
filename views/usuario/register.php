@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-          <input type="submit" id="send" value="Registrarse">
+          <input type="submit" id="send" value="Registrarse" class="btn btn-success">
         </form>
         
           

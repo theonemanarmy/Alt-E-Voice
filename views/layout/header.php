@@ -19,8 +19,9 @@
   <link href="<?= url_project ?>assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles-->
-  <link href="<?= url_project ?>assets/css/sb-admin.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="<?= url_project ?>assets/css/sb-admin.css" rel="stylesheet">
+  
 
 </head>
 
@@ -34,7 +35,7 @@
 
     <a class="navbar-brand mr-1" href="<?= url_project ?>"> Alt-E-Voice</a>
 
-    <img class="img-logo" src="<?= url_project ?>assets/images/logo-white.png" alt="">
+    <img class="img-logo" src="<?= url_project ?>assets/images/logo-AEV.png" alt="">
 
 
     <!-- Navbar Search -->
