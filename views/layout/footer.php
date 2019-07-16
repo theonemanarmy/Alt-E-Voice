@@ -54,6 +54,7 @@
 <script src="<?= url_project ?>assets/vendor/chart.js/Chart.min.js"></script>
 <script src="<?= url_project ?>assets/vendor/datatables/jquery.dataTables.js"></script>
 <script src="<?= url_project ?>assets/vendor/datatables/dataTables.bootstrap4.js"></script>
+<script src="<?= url_project ?>assets/aos-master/dist/aos.js"></script>
 
 <!-- Custom scripts for all pages-->
 <script src="<?= url_project ?>assets/js/sb-admin.js"></script>
@@ -61,7 +62,9 @@
 <!-- Demo scripts for this page-->
 <script src="<?= url_project ?>assets/js/demo/datatables-demo.js"></script>
 <script src="<?= url_project ?>assets/js/demo/chart-area-demo.js"></script>
-<script src="<?= url_project ?>assets/js/sweetalert2.all.min.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 

@@ -2054,6 +2054,51 @@ pre code {
   border: 0;
 }
 
+.campo{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.campo:valid{
+  border: 1px solid green;
+}
+.campo:invalid{
+  border: 1px solid red;
+}
+.campo:valid + span::after{
+  content: url(../images/exito.png);
+}
+.campo:invalid + span::after{
+  content: url(../images/error.png);
+}
+
+.error-msj{
+  position: absolute;
+	width: 150px;
+	height: auto;
+	padding: 5px;
+	background-color: red;
+	color: #222;
+	border-radius: 5px;
+	left: 502px;
+	font-size: 12px;
+	animation: resaltar 0.2s linear 4;
+}
+
 .form-control {
   display: block;
   width: 100%;

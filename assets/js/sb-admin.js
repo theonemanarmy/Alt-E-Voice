@@ -36,9 +36,8 @@
     }, 1000, 'easeInOutExpo');
     event.preventDefault();
   });
-
-  //validation login
-  $('#send').click(function(){
+  
+ /* $('#send').click(function(){
     var firstName = $('#firstName').val();
     var lastName = $('#lastName').val();
     var email = $('#inputEmail').val();
@@ -81,6 +80,6 @@
       }
     }
 
-  });
+  });*/
 
 })(jQuery); // End of use strict

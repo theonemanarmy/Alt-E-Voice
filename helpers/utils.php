@@ -9,7 +9,7 @@ class Utils{
             $alert = "<div class='alert-red'>".$errores[$campo]."</div>";
         }
 
-        echo $alert;
+        return $alert;
     } 
 
     public static function deleteSession($name){
@@ -29,4 +29,5 @@ class Utils{
             return true;
         }
     }
+
 }

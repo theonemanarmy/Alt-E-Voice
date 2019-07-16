@@ -14,6 +14,7 @@
 
   <!-- Custom fonts-->
   <link href="<?= url_project ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="<?= url_project ?>assets/aos-master/dist/aos.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
   <link href="<?= url_project ?>assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
@@ -21,7 +22,7 @@
   <!-- Custom styles-->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="<?= url_project ?>assets/css/sb-admin.css" rel="stylesheet">
-  
+  <script src="<?= url_project ?>assets/js/validation.js"></script>
 
 </head>
 
@@ -49,10 +50,28 @@
           </div>
         </div>-->
       <?php if (!isset($_SESSION['identity'])) : ?>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
-        <input type="password" name="password" id="password" placeholder="Contraseña" required>
-        <input type="submit" value="Iniciar" class="btn btn-primary btnSend">
-        <a href="<?= url_project ?>usuario/register" class="btn btn-success">Registrate</a>
+        <div class="form-row">
+          <div class="col-md-4">
+            <div class="form-label-group">
+              <input type="email" name="email" id="inputEmailHeader" class="form-control" placeholder="E-mail" required="required">
+              <label for="inputEmailHeader">Dirección de e-mail</label>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-label-group">
+              <input type="password" name="password" id="inputPasswordHeader" class="form-control" placeholder="Contraseña" required>
+              <label for="inputPasswordHeader">Ingresa tu password</label>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <input type="submit" value="Iniciar" class="btn btn-primary btnSend" style="width:100%;">
+          </div>
+          <div class="col-md-2">
+            <a href="<?= url_project ?>usuario/register" class="btn btn-success">Registrate</a>
+          </div>
+        </div>
       <?php endif; ?>
     </form>
 
