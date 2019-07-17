@@ -27,73 +27,56 @@ class usuarioController
     {
         if (isset($_POST)) {
 
-            function limpiarCampos($campo)
-            {
-                $campo = htmlspecialchars($campo);
-                $campo = stripcslashes($campo);
-                $campo = trim($campo);
-            }
-
-            $firstname = limpiarCampos($_POST['firstName']);
-            $lastname = limpiarCampos($_POST['lastName']);
-            $email = limpiarCampos($_POST['email']);
-            $password = limpiarCampos($_POST['password']);
-            $confpassword = limpiarCampos($_POST['confPassword']);
+            $firstname =$_POST['firstName'];
+            $lastname = $_POST['lastName'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $confpassword = $_POST['confPassword'];
 
             $errores = array();
 
-            if ($firstname && $lastname && $email && $password && $confpassword) {
-                
-                if (!empty($firstname) && !is_numeric($firstname) && strlen($firstname) > 2 && strlen($firstname) < 100) {
-                    $nombre_validado = true;
-                } else {
-                    $nombre_validado = false;
-                    $error['firstname'] = "Nombre no válido";
+            if($firstname && $lastname && $email && $password && $confpassword){
+                if(!empty($firstname) && !is_int($firstname) && strlen($firstname)>2 && strlen($firstname)<100){
+                    $name_validate = true;
+                }else{
+                    $name_validate = false;
+                    $errores['firstName'] = "Nombre no válido";
                 }
 
-                if (!empty($lastname) && !is_numeric($lastname) && strlen($lastname) > 2 && strlen($lastname) < 100) {
-                    $apellidos_validados = true;
-                } else {
-                    $apellidos_validados = false;
-                    $errorres['lastname'] = "Apellidos no válidos";
+                if(!empty($lastname) && !is_int($lastname) && strlen($lastname)>2 && strlen($lastname)<100){
+                    $lastname_validate = true;
+                }else{
+                    $lastname_validate = false;
+                    $errores['lastName'] = "Apellidos no válidos";
                 }
 
-                if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($email) > 2 && strlen($email) < 150) {
-                    $email_validado = true;
-                } else {
-                    $email_validado = false;
+                if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($email)>2 && strlen($email)<120){
+                    $email_validate = true;
+                }else{
+                    $email_validate = false;
                     $errores['email'] = "Email no válido";
                 }
 
-                if (!empty($password) && $password == $confpassword && strlen($password) > 2 && strlen($password) < 100) {
-                    $password_validada = true;
-                } else {
-                    $password_validada = false;
-                    $errores['password'] = "Contraseña no válida";
+                if(!empty($password) && $password == $confpassword && strlen($password)>2 && strlen($password)<120){
+                    $password_validate = true;
+                }else{
+                    $password_validate = false;
+                    $errores['password'] = "Password no válida";
                 }
 
-                if (count($errores) == 0) {
-
+                if(count($errores) == 0){
                     $usuario = new User();
                     $usuario->setFirstname($firstname);
                     $usuario->setLastname($lastname);
                     $usuario->setEmail($email);
                     $usuario->setPassword($password);
-    
-                    $save = $usuario->save();
-    
-                    if ($save) {
-                        $_SESSION['register'] = "complete";
-                    } else {
-                        $_SESSION['register'] = "failed";
-                    }
+                    
+                    var_dump($usuario);
+
                 }else{
-                    $_SESSION['errores'] = $errores;
+                    echo "errores";
                 }
-            } else {
-                $_SESSION['register'] = "failed";
             }
-            header("Location:" . url_project . 'usuario/register');
         } 
     } //termina función save
 
@@ -101,8 +84,8 @@ class usuarioController
     {
         if (isset($_POST)) {
             $usuario = new User();
-            $usuario->setEmail($_POST['email']);
-            $usuario->setPassword($_POST['password']);
+            $usuario->setEmail($_POST['email-login']);
+            $usuario->setPassword($_POST['password-login']);
             $identity = $usuario->login();
 
             if ($identity && is_object($identity)) {

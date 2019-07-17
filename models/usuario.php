@@ -2,7 +2,6 @@
 
 class User{
     private $id;
-    private $red_id;
     private $firstname;
     private $lastname;
     private $email;
@@ -33,26 +32,6 @@ class User{
     public function setId($id)
     {
         $this->id = $this->db->real_escape_string($id);
-
-        return $this;
-    }
-
-    /**
-     * Get the value of red_id
-     */ 
-    public function getred_Id()
-    {
-        return $this->red_id;
-    }
-
-    /**
-     * Set the value of red_id
-     *
-     * @return  self
-     */ 
-    public function setred_Id($red_id)
-    {
-        $this->red_id = $this->db->real_escape_string($red_id);
 
         return $this;
     }
@@ -198,7 +177,7 @@ class User{
     }
 
     public function save(){
-        $sql = "INSERT INTO usuarios VALUES(null, null, '{$this->getFirstname()}', '{$this->getLastname()}', '{$this->getEmail()}', '{$this->getPassword()}', CURDATE(), 'admin', null);";
+        $sql = "INSERT INTO usuarios VALUES(null, '{$this->getFirstname()}', '{$this->getLastname()}', '{$this->getEmail()}', '{$this->getPassword()}', CURDATE(), 'admin', null);";
         $save = $this->db->query($sql);
 
         $result = false;

@@ -58,6 +58,7 @@
 
 <!-- Custom scripts for all pages-->
 <script src="<?= url_project ?>assets/js/sb-admin.js"></script>
+<script src="<?= url_project ?>assets/js/validation.js"></script>
 
 <!-- Demo scripts for this page-->
 <script src="<?= url_project ?>assets/js/demo/datatables-demo.js"></script>

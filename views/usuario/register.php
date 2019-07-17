@@ -12,7 +12,7 @@
 
       </div>
       <div class="card-body">
-        <form action="<?= url_project ?>usuario/save" method="POST" enctype="multipart/form-data">
+        <form action="<?= url_project ?>usuario/save" method="POST" enctype="multipart/form-data" novalidate>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">

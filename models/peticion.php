@@ -26,7 +26,7 @@ class Petition{
      */ 
     public function setId($id)
     {
-        $this->id = $id;
+        $this->id = $this->db->real_escape_string($id);
 
         return $this;
     }
@@ -46,7 +46,7 @@ class Petition{
      */ 
     public function setUsuario_id($usuario_id)
     {
-        $this->usuario_id = $usuario_id;
+        $this->usuario_id = $this->db->real_escape_string($usuario_id);
 
         return $this;
     }
@@ -66,7 +66,7 @@ class Petition{
      */ 
     public function setTexto($texto)
     {
-        $this->texto = $texto;
+        $this->texto = $this->db->real_escape_string($texto);
 
         return $this;
     }

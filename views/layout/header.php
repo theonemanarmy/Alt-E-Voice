@@ -22,7 +22,7 @@
   <!-- Custom styles-->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="<?= url_project ?>assets/css/sb-admin.css" rel="stylesheet">
-  <script src="<?= url_project ?>assets/js/validation.js"></script>
+
 
 </head>
 
@@ -53,14 +53,14 @@
         <div class="form-row">
           <div class="col-md-4">
             <div class="form-label-group">
-              <input type="email" name="email" id="inputEmailHeader" class="form-control" placeholder="E-mail" required="required">
+              <input type="email" name="email-login" id="inputEmailHeader" class="form-control" placeholder="E-mail" required="required">
               <label for="inputEmailHeader">Dirección de e-mail</label>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="form-label-group">
-              <input type="password" name="password" id="inputPasswordHeader" class="form-control" placeholder="Contraseña" required>
+              <input type="password" name="password-login" id="inputPasswordHeader" class="form-control" placeholder="Contraseña" required>
               <label for="inputPasswordHeader">Ingresa tu password</label>
             </div>
           </div>
