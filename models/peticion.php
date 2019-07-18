@@ -72,7 +72,8 @@ class Petition{
     }
 
     public function getAllPetitions(){
-        $sql = "SELECT id, texto FROM peticiones";
+        $sql = "SELECT p.* FROM peticiones p "
+        ."WHERE p.usuario_id = {$this->getUsuario_id()} ORDER BY id DESC;";
         $petitions = $this->db->query($sql);
 
         return $petitions;

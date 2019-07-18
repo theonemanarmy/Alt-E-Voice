@@ -63,7 +63,10 @@ class Network{
     }
 
     public function getAll(){
-        $sql = "SELECT id, nombre FROM redes";
+        $sql = "SELECT r.* FROM redes r "
+                //."INNER JOIN usuarios u ON u.id = r.usuario_id "
+                ."WHERE r.usuario_id = {$this->getUsuario_id()} ORDER BY id DESC;";
+                
         $networks = $this->db->query($sql);
 
         return $networks;

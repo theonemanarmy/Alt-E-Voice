@@ -71,12 +71,19 @@ class usuarioController
                     $usuario->setEmail($email);
                     $usuario->setPassword($password);
                     
-                    var_dump($usuario);
+                    $save = $usuario->save();
+
+                    if($save){
+                        $_SESSION['register'] = "complete";
+                    }else{
+                        $_SESSION['register'] = "failed";
+                    }
 
                 }else{
-                    echo "errores";
+                    $_SESSION['register'] = "failed";
                 }
             }
+            header("Location:".url_project."usuario/register");
         } 
     } //termina función save
 
