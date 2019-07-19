@@ -1,8 +1,9 @@
-<table class="table">
+<table class="table table-responsive-sm">
   <thead class="thead-dark">
     <tr>
       <th scope="col">id</th>
       <th scope="col">Red</th>
+      <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>

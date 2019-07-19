@@ -14,13 +14,13 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?=url_project?>#about">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-user-friends"></i>
             <span>Nosotros</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?=url_project?>#team">
-            <i class="fas fa-fw fa-table"></i>
+        <i class="fas fa-hands-helping"></i>
             <span>Equipo de trabajo</span>
         </a>
     </li>
@@ -43,19 +43,25 @@
     <?php if(isset($_SESSION['admin'])): ?>
         <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>peticiones/ver">
-                <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-hand-paper"></i>
                 <span>Peticiones</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>red/ver">
-                <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-wifi"></i>
                 <span>Mis redes</span>
             </a>
         </li>
     <?php endif; ?>
 
     <?php if(isset($_SESSION['identity'])): ?>
+    <li class="nav-item">
+            <a class="nav-link" href="<?=url_project?>usuario/logout">
+            <i class="fas fa-user-edit"></i>
+                <span>Mis datos</span>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="<?=url_project?>usuario/logout">
                 <i class="fas fa-sign-out-alt"></i>
