@@ -25,8 +25,91 @@
   </p>
 </div>
 
-<div class="w3-row-padding w3-grayscale" id="team">
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Equipo de trabajo</h3>
+
+<div class="row" id="team">
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="card">
+      <div class="face face1">
+        <div class="content-card">
+          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
+          <h3>Juan</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+          </p>
+          <a href="">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="card">
+      <div class="face face1">
+        <div class="content-card">
+          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
+          <h3>Juan</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+          </p>
+          <a href="">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="card">
+      <div class="face face1">
+        <div class="content-card">
+          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
+          <h3>Juan</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+          </p>
+          <a href="">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="card">
+      <div class="face face1">
+        <div class="content-card">
+          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
+          <h3>Juan</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+          </p>
+          <a href="">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Equipo de trabajo</h3>
 
   <div class="w3-col l3 m6 w3-margin-bottom" data-aos="flip-left">
 
@@ -59,5 +142,37 @@
     <p class="w3-opacity">Desarrollador Móvil</p>
     <p>Programador y Diseñador de la aplicación móvil</p>
     <p><button class="w3-button w3-light-grey w3-block">Contacto</button></p>
+  </div>--<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Equipo de trabajo</h3>
+
+  <div class="w3-col l3 m6 w3-margin-bottom" data-aos="flip-left">
+
+    <img src="/w3images/team2.jpg" alt="Aldrich" style="width:100%">
+    <h3>Aldrich</h3>
+    <p class="w3-opacity">Programador</p>
+    <p>Fundador de la empresa y del sistema</p>
+    <p><button class="w3-button w3-light-grey w3-block">Contacto</button></p>
   </div>
-</div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom" data-aos="flip-right">
+    <img src="/w3images/team1.jpg" alt="Juan" style="width:100%">
+    <h3>Juan</h3>
+    <p class="w3-opacity">Desarrollador web</p>
+    <p>Programador y Diseñador de la aplicación web</p>
+    <p><button class="w3-button w3-light-grey w3-block">Contacto</button></p>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom" data-aos="flip-up">
+    <img src="/w3images/team3.jpg" alt="Fernanda" style="width:100%">
+    <h3>Fernanda</h3>
+    <p class="w3-opacity">Analista</p>
+    <p>Analista y encargada de transformar la información </p>
+    <p><button class="w3-button w3-light-grey w3-block">Contacto</button></p>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom" data-aos="flip-down">
+    <img src="/w3images/team4.jpg" alt="Eric" style="width:100%">
+    <h3>Eric</h3>
+    <p class="w3-opacity">Desarrollador Móvil</p>
+    <p>Programador y Diseñador de la aplicación móvil</p>
+    <p><button class="w3-button w3-light-grey w3-block">Contacto</button></p>
+  </div>-->
