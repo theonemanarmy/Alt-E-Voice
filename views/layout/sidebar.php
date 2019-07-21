@@ -1,10 +1,10 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
-    <li class="nav-item">
-        <?php if(!isset($_SESSION['identity'])): ?>
-        <?php else: ?>
+    <li class="nav-item" data-aos="fade-right">
+        <?php if (!isset($_SESSION['identity'])) : ?>
+        <?php else : ?>
             <h1 class="white-text"><?= $_SESSION['identity']->nombre; ?> <?= $_SESSION['identity']->apellidos; ?></h1>
-        <?php endif;?>
+        <?php endif; ?>
     </li>
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
@@ -13,14 +13,14 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?=url_project?>#about">
+        <a class="nav-link" href="<?= url_project ?>#about">
             <i class="fas fa-user-friends"></i>
             <span>Nosotros</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?=url_project?>#team">
-        <i class="fas fa-hands-helping"></i>
+        <a class="nav-link" href="<?= url_project ?>#team">
+            <i class="fas fa-hands-helping"></i>
             <span>Equipo de trabajo</span>
         </a>
     </li>
@@ -31,8 +31,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Login Screens:</h6>
-          <a class="dropdown-item" href="<?=url_project?>views/usuario/login.php">Login</a>
-          <a class="dropdown-item" href="<?=url_project?>views/usuario/register.php">Register</a>
+          <a class="dropdown-item" href="<?= url_project ?>views/usuario/login.php">Login</a>
+          <a class="dropdown-item" href="<?= url_project ?>views/usuario/register.php">Register</a>
           <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Other Pages:</h6>
@@ -40,30 +40,30 @@
           <a class="dropdown-item" href="blank.html">Blank Page</a>
         </div>
       </li>-->
-    <?php if(isset($_SESSION['admin'])): ?>
+    <?php if (isset($_SESSION['admin'])) : ?>
         <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>peticiones/ver">
-            <i class="fas fa-hand-paper"></i>
+                <i class="fas fa-hand-paper"></i>
                 <span>Peticiones</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>red/ver">
-            <i class="fas fa-wifi"></i>
+                <i class="fas fa-wifi"></i>
                 <span>Mis redes</span>
             </a>
         </li>
     <?php endif; ?>
 
-    <?php if(isset($_SESSION['identity'])): ?>
-    <li class="nav-item">
-            <a class="nav-link" href="<?=url_project?>usuario/logout">
-            <i class="fas fa-user-edit"></i>
+    <?php if (isset($_SESSION['identity'])) : ?>
+        <li class="nav-item">
+            <a class="nav-link" href="<?= url_project ?>usuario/editar">
+                <i class="fas fa-user-edit"></i>
                 <span>Mis datos</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?=url_project?>usuario/logout">
+            <a class="nav-link" href="<?= url_project ?>usuario/logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Cerrar Sesión</span>
             </a>

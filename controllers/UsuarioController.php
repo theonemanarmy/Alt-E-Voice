@@ -87,6 +87,10 @@ class usuarioController
         } 
     } //termina función save
 
+    public function editar(){
+        
+    }
+
     public function login()
     {
         if (isset($_POST)) {

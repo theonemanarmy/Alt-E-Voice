@@ -52,14 +52,14 @@
       <?php if (!isset($_SESSION['identity'])) : ?>
         <div class="form-row">
           <div class="col-md-4">
-            <div class="form-label-group">
+            <div class="form-label-group" data-aos="zoom-in">
               <input type="email" name="email-login" id="inputEmailHeader" class="form-control" placeholder="E-mail" required="required">
               <label for="inputEmailHeader">Dirección de e-mail</label>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="form-label-group">
+            <div class="form-label-group" data-aos="zoom-out">
               <input type="password" name="password-login" id="inputPasswordHeader" class="form-control" placeholder="Contraseña" required>
               <label for="inputPasswordHeader">Ingresa tu password</label>
             </div>
@@ -69,7 +69,13 @@
             <input type="submit" value="Iniciar" class="btn btn-primary btnSend" style="width:100%;">
           </div>
           <div class="col-md-2">
-            <a href="<?= url_project ?>usuario/register" class="btn btn-success">Registrate</a>
+            <a href="<?= url_project ?>usuario/register" class="btn-1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Registrate
+            </a>
           </div>
         </div>
       <?php endif; ?>

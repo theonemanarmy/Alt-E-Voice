@@ -16,7 +16,7 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <div class="form-label-group">
+                <div class="form-label-group" data-aos="zoom-in-up">
                   <input type="text" name="firstName" id="firstName" onkeyup="this.className = 'campo';" class="form-control" placeholder="Nombre" required="required" pattern="[A-Za-z-áéíóú\s]+" minlength="2" maxlength="100" autofocus="autofocus"><span></span>
                   <label for="firstName">Nombre</label>
                   <div><?php Utils::mostrarErrores('errores', 'firstName'); ?></div>
@@ -26,8 +26,8 @@
 
               </div>
               <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="text" name="lastName" id="lastName" onkeyup="this.className = 'campo';" class="form-control" placeholder="Apellidos" minlength="2" maxlength="150" required="required"><span></span>
+                <div class="form-label-group" data-aos="zoom-in-left">
+                  <input type="text" name="lastName" id="lastName" onkeyup="this.className = 'campo';" class="form-control" placeholder="Apellidos" minlength="2" maxlength="150" pattern="[A-Za-z-áéíóú\s]+" required="required"><span></span>
                   <label for="lastName">Apellidos</label>
                   <div><?php Utils::mostrarErrores('errores', 'lastName'); ?></div>
                 </div>
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="form-group">
-            <div class="form-label-group">
+            <div class="form-label-group" data-aos="zoom-in-right">
               <input type="email" name="email" id="inputEmail" onkeyup="this.className = 'campo';" class="form-control campo" placeholder="E-mail" required="required" minlength="5" maxlength="150" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"><span></span>
               <label for="inputEmail">Dirección de e-mail</label>
               <div><?php Utils::mostrarErrores('errores', 'email'); ?></div>
@@ -50,7 +50,7 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <div class="form-label-group">
+                <div class="form-label-group" data-aos="zoom-in-left">
                   <input type="password" name="password" id="inputPassword" onkeyup="this.className = 'campo';" class="form-control" placeholder="Contraseña" required="required" minlength="2"><span></span>
                   <label for="inputPassword">Contraseña</label>
                   <div><?php Utils::mostrarErrores('errores', 'password'); ?></div>
@@ -60,7 +60,7 @@
 
               </div>
               <div class="col-md-6">
-                <div class="form-label-group">
+                <div class="form-label-group" data-aos="zoom-out-up">
                   <input type="password" name="confPassword" id="confirmPassword" onkeyup="this.className = 'campo';" class="form-control" placeholder="Confirm password" minlength="2" required="required"><span></span>
                   <label for="confirmPassword">Confirm password</label>
                 </div>
@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-          <input type="submit" id="send" value="Registrarse" class="btn btn-success">
+          <input type="submit" id="send" value="Registrarse" class="btn btn-success" data-aos="zoom-in">
         </form>
 
 

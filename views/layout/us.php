@@ -26,20 +26,19 @@
 </div>
 
 
-<div class="row" id="team">
+<div class="row" id="team"  data-aos="flip-left">
   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
     <div class="card">
       <div class="face face1">
         <div class="content-card">
-          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
-          <h3>Juan</h3>
+          <img src="<?= url_project ?>assets/images/avatar.png" alt="">
+          <h3>Aldrich Barrera</h3>
         </div>
       </div>
       <div class="face face2">
         <div class="content-card">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+            Constructor del sistema y SEO de More Apps.
           </p>
           <a href="">Contacto</a>
         </div>
@@ -51,15 +50,14 @@
     <div class="card">
       <div class="face face1">
         <div class="content-card">
-          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
-          <h3>Juan</h3>
+          <img src="<?= url_project ?>assets/images/avatar.png" alt="">
+          <h3>Juan Hernández</h3>
         </div>
       </div>
       <div class="face face2">
         <div class="content-card">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+            Desarrollador y constructor de la aplicación web.
           </p>
           <a href="">Contacto</a>
         </div>
@@ -71,15 +69,14 @@
     <div class="card">
       <div class="face face1">
         <div class="content-card">
-          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
-          <h3>Juan</h3>
+          <img src="<?= url_project ?>assets/images/avatar-woman.png" alt="">
+          <h3>Fernanda Delgado</h3>
         </div>
       </div>
       <div class="face face2">
         <div class="content-card">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+            Analista y Documentadora del sistema.
           </p>
           <a href="">Contacto</a>
         </div>
@@ -91,15 +88,14 @@
     <div class="card">
       <div class="face face1">
         <div class="content-card">
-          <img src="<?= url_project ?>assets/images/man-user.png" alt="">
-          <h3>Juan</h3>
+          <img src="<?= url_project ?>assets/images/avatar.png" alt="">
+          <h3>Eric Treviño</h3>
         </div>
       </div>
       <div class="face face2">
         <div class="content-card">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae id dicta cum sapiente aliquid aut unde officiis
+            Desarrollador y constructor de la aplicación móvil
           </p>
           <a href="">Contacto</a>
         </div>

@@ -1,4 +1,4 @@
-<table class="table table-responsive-sm">
+<table class="table table-responsive-sm" data-aos="zoom-in-up">
   <thead class="thead-dark">
     <tr>
       <th scope="col">id</th>
