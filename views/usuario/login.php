@@ -7,14 +7,14 @@
             <form action="<?=url_project?>usuario/login" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="email" name="email" id="inputEmail" class="form-control"
+                        <input type="email" name="email-login" id="inputEmail" class="form-control"
                             placeholder="Dirección de correo" required="required" autofocus="autofocus">
                         <label for="inputEmail">Correo electrónico</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="password" name="password" id="inputPassword" class="form-control"
+                        <input type="password" name="password-login" id="inputPassword" class="form-control"
                             placeholder="Contraseña" required="required">
                         <label for="inputPassword">Contraseña</label>
                     </div>
@@ -33,8 +33,8 @@
               <h1 class="white-text"><?= $_SESSION['identity']->nombre; ?> <?= $_SESSION['identity']->apellidos; ?></h1>
             <?php endif;?>
             <div class="text-center">
-                <a class="d-block small mt-3" href="register.html">Register an Account</a>
-                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                <!--<a class="d-block small mt-3" href="<?= url_project ?>usuario/">Register an Account</a>-->
+                <!--<a class="d-block small" href="forgot-password.html">Forgot Password?</a>-->
             </div>
         </div>
     </div>
