@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-          <input type="submit" id="send" value="Registrarse" class="btn btn-success" data-aos="zoom-in">
+          <input type="submit" id="send" value="Enviar" class="btn btn-success" data-aos="zoom-in">
         </form>
 
 

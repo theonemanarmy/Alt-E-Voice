@@ -88,7 +88,21 @@ class usuarioController
     } //termina función save
 
     public function editar(){
+        Utils::isAdmin();
+
+        if($_GET['id']){
+            $usuario_id = $_GET['id'];
         
+            $edit = true;
+
+            $user = new User();
+            $user->setId($usuario_id);
+            $user = $user->getOne();
+        }else{
+            header("Location:".url_project."usuario/register");
+        }
+
+        require_once 'views/usuario/register.php';
     }
 
     public function login()

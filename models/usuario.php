@@ -176,6 +176,18 @@ class User{
         return $this;
     }
 
+    public function getOne(){
+        $sql = "SELECT * FROM usuarios WHERE id = {$this->getId()}";
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if($save){
+            $result = true;
+        }
+        
+        return $result;
+    }
+
     public function save(){
         $sql = "INSERT INTO usuarios VALUES(null, '{$this->getFirstname()}', '{$this->getLastname()}', '{$this->getEmail()}', '{$this->getPassword()}', CURDATE(), 'admin', null);";
         $save = $this->db->query($sql);

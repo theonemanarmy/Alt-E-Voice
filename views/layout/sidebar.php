@@ -57,7 +57,7 @@
 
     <?php if (isset($_SESSION['identity'])) : ?>
         <li class="nav-item">
-            <a class="nav-link" href="<?= url_project ?>usuario/editar">
+            <a class="nav-link" href="<?= url_project ?>usuario/editar&id=<?= $_SESSION['identity']->id ?>">
                 <i class="fas fa-user-edit"></i>
                 <span>Mis datos</span>
             </a>
