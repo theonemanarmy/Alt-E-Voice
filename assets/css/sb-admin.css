@@ -10934,6 +10934,7 @@ body {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 80px;
+  overflow-y: hidden;
 }
 
 .scroll-to-top {

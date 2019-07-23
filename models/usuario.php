@@ -177,15 +177,8 @@ class User{
     }
 
     public function getOne(){
-        $sql = "SELECT * FROM usuarios WHERE id = {$this->getId()}";
-        $save = $this->db->query($sql);
-
-        $result = false;
-        if($save){
-            $result = true;
-        }
-        
-        return $result;
+        $usuarios = $this->db->query("SELECT * FROM usuarios WHERE id = {$this->getId()}");
+        return $usuarios->fetch_object();
     }
 
     public function save(){

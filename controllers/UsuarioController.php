@@ -90,8 +90,8 @@ class usuarioController
     public function editar(){
         Utils::isAdmin();
 
-        if($_GET['id']){
-            $usuario_id = $_GET['id'];
+        if($_SESSION['identity']){
+            $usuario_id = $_SESSION['identity']->id;
         
             $edit = true;
 
