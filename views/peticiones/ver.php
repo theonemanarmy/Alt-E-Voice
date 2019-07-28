@@ -11,7 +11,7 @@
       <tr>
         <th scope="row"><?= $pet->id ?></th>
         <td>
-            <?= $pet->texto ?>
+            <kbd><?= $pet->texto ?></kbd>
         </td>
         <td><a href="<?= url_project ?>peticiones/delete" class="btn btn-danger">Borrar</a></td>
       </tr>

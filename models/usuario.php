@@ -213,5 +213,22 @@ class User{
             }
             return $result;
         }
+    }//termina función login
+
+    public function edit(){
+        $sql = "UPDATE usuarios SET nombre = '{$this->getFirstname()}', apellidos = '{$this->getLastname()}', email = '{$this->getEmail()}' "
+                ."WHERE id = {$this->getId()};";
+
+        
+
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if($save){
+            $result = true;
+        }
+
+        return $result;
+
     }
-}
+}//termina clase User

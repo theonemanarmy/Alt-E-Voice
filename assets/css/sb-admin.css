@@ -2527,11 +2527,11 @@ textarea.form-control {
   margin-left: -5px;
 }
 
-.form-row > .col,
+/*.form-row > .col,
 .form-row > [class*="col-"] {
   padding-right: 5px;
   padding-left: 5px;
-}
+}*/
 
 .form-check {
   position: relative;
@@ -5229,7 +5229,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  /*border: 1px solid rgba(0, 0, 0, 0.125);*/
   border-radius: 0.25rem;
 }
 

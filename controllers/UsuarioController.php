@@ -27,7 +27,7 @@ class usuarioController
     {
         if (isset($_POST)) {
 
-            $firstname =$_POST['firstName'];
+            $firstname = $_POST['firstName'];
             $lastname = $_POST['lastName'];
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -35,71 +35,87 @@ class usuarioController
 
             $errores = array();
 
-            if($firstname && $lastname && $email && $password && $confpassword){
-                if(!empty($firstname) && !is_int($firstname) && strlen($firstname)>2 && strlen($firstname)<100){
+            if ($firstname && $lastname && $email) {
+                if (!empty($firstname) && !is_int($firstname) && strlen($firstname) > 2 && strlen($firstname) < 100) {
                     $name_validate = true;
-                }else{
+                } else {
                     $name_validate = false;
                     $errores['firstName'] = "Nombre no válido";
                 }
 
-                if(!empty($lastname) && !is_int($lastname) && strlen($lastname)>2 && strlen($lastname)<100){
+                if (!empty($lastname) && !is_int($lastname) && strlen($lastname) > 2 && strlen($lastname) < 100) {
                     $lastname_validate = true;
-                }else{
+                } else {
                     $lastname_validate = false;
                     $errores['lastName'] = "Apellidos no válidos";
                 }
 
-                if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($email)>2 && strlen($email)<120){
+                if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($email) > 2 && strlen($email) < 120) {
                     $email_validate = true;
-                }else{
+                } else {
                     $email_validate = false;
                     $errores['email'] = "Email no válido";
                 }
 
-                if(!empty($password) && $password == $confpassword && strlen($password)>2 && strlen($password)<120){
+                /*if (!empty($password) && $password == $confpassword && strlen($password) > 2 && strlen($password) < 120) {
                     $password_validate = true;
-                }else{
+                } else {
                     $password_validate = false;
                     $errores['password'] = "Password no válida";
-                }
+                }*/
 
-                if(count($errores) == 0){
+                if (count($errores) == 0) {
                     $usuario = new User();
                     $usuario->setFirstname($firstname);
                     $usuario->setLastname($lastname);
                     $usuario->setEmail($email);
                     $usuario->setPassword($password);
                     
-                    $save = $usuario->save();
-
-                    if($save){
+                    if(isset($_SESSION['identity'])){
+                        $id = $_SESSION['identity']->id;
+                        $usuario->setId($id);
+                        $saveEdit = $usuario->edit();
+                    }else{
+                        $save = $usuario->save();
+                    }
+                    
+                    if ($save) {
                         $_SESSION['register'] = "complete";
+                        header("Location:" . url_project . "usuario/register");
                     }else{
                         $_SESSION['register'] = "failed";
+                        header("Location:" . url_project . "usuario/register");
                     }
-
-                }else{
+                    
+                    if($saveEdit){
+                        $_SESSION['register'] = "complete";
+                        header("Location:" . url_project . "usuario/editar&id=".$_SESSION['identity']->id);
+                    }else {
+                        $_SESSION['register'] = "failed";
+                        header("Location:" . url_project . "usuario/editar&id=".$_SESSION['identity']->id);
+                    }
+                } else {
                     $_SESSION['register'] = "failed";
                 }
-            }
-            header("Location:".url_project."usuario/register");
-        } 
+            } //validar que estén en true los campos
+            
+        }
     } //termina función save
 
-    public function editar(){
+    public function editar()
+    {
         Utils::isAdmin();
 
-        if($_SESSION['identity']){
+        if ($_SESSION['identity']) {
             $usuario_id = $_SESSION['identity']->id;
-        
+
             $edit = true;
 
             $user = new User();
             $user->setId($usuario_id);
             $user = $user->getOne();
-        }else{
-            header("Location:".url_project."usuario/register");
+        } else {
+            header("Location:" . url_project . "usuario/register");
         }
 
         require_once 'views/usuario/register.php';
