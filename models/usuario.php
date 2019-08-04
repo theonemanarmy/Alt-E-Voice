@@ -219,8 +219,6 @@ class User{
         $sql = "UPDATE usuarios SET nombre = '{$this->getFirstname()}', apellidos = '{$this->getLastname()}', email = '{$this->getEmail()}' "
                 ."WHERE id = {$this->getId()};";
 
-        
-
         $save = $this->db->query($sql);
 
         $result = false;

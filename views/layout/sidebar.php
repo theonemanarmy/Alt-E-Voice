@@ -63,6 +63,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="<?= url_project ?>usuario/myGuide">
+                <i class="fas fa-book-open"></i>
+                <span>Manual de uso</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>usuario/logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Cerrar Sesión</span>

@@ -13,6 +13,16 @@ class usuarioController
         require_once 'views/usuario/register.php';
     }
 
+    public function myGuide()
+    {
+        if(!isset($_SESSION['identity'])){
+            header("Location:".url_project);
+        }else{
+            require_once 'views/usuario/guide.php';
+        }
+        
+    }
+
     public function startLogin()
     {
         if (!isset($_SESSION['identity']) && !isset($_SESSION['admin'])) {

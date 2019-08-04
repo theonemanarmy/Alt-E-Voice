@@ -1,10 +1,31 @@
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="<?= url_project ?>assets/images/header-principal.png" alt="Alt-E-Voice" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<?=url_project?>assets/images/header-principal.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <a href="#">
+        <img src="<?=url_project?>assets/images/DescargaApp.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡Da click aquí para descargar!</h5>
+        </div>
+      </a>
+    </div>
   </div>
-</header>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 <!-- About Section -->
 <div class="w3-container w3-padding-32" id="about">

@@ -30,4 +30,12 @@ class Utils{
         }
     }
 
+    public static function isIdentity(){
+        if(!isset($_SESSION['identity'])){
+            header("Location:".url_project);
+        }else{
+            return true;
+        }
+    }
+
 }
