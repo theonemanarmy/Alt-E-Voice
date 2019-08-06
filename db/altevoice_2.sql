@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2019 a las 20:13:09
+-- Tiempo de generación: 06-08-2019 a las 07:11:33
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -31,16 +31,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `peticiones` (
   `id` int(255) NOT NULL,
   `usuario_id` int(10) NOT NULL,
-  `texto` varchar(255) NOT NULL
+  `texto` varchar(255) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `peticiones`
 --
 
-INSERT INTO `peticiones` (`id`, `usuario_id`, `texto`) VALUES
-(1, 1, 'CTRL+O'),
-(2, 2, 'Windows+R');
+INSERT INTO `peticiones` (`id`, `usuario_id`, `texto`, `fecha`) VALUES
+(1, 1, 'CTRL+O', '2019-08-06 03:40:39'),
+(2, 2, 'Windows+R', '2019-08-06 03:40:39'),
+(3, 1, '', '2019-08-06 03:59:58'),
+(4, 1, '', '2019-08-06 04:00:39'),
+(5, 1, '', '2019-08-06 04:00:59'),
+(6, 1, '', '2019-08-06 04:03:14'),
+(7, 1, '', '2019-08-06 04:04:32'),
+(8, 1, 'hola', '2019-08-06 04:53:41'),
+(9, 1, 'ctrl+z', '2019-08-06 05:03:36'),
+(10, 1, 'ctrl + y', '2019-08-06 05:05:40');
 
 -- --------------------------------------------------------
 
@@ -87,7 +96,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `email`, `password`, `fecha`, `rol`, `imagen`) VALUES
 (1, 'Juan ', 'Hernández Antopia', 'juan_27angel@hotmail.com', '$2y$04$VWy2QM90biCBHHZIHZ2E9.1.PdsNdtch1Km27BiDOenjiT.g5QDO.', '2019-07-17', 'admin', NULL),
-(2, 'Jerry', 'Castro Pérez', 'jerry@jerry.com', '$2y$04$7zeZdwX9N0nCn9z51RIwMuw2SXd0fk9tnt5S1BVXCCI00JaY35k76', '2019-07-17', 'admin', NULL);
+(2, 'Juan', 'Castro Pérez', 'thalia@thalia.com', '$2y$04$7zeZdwX9N0nCn9z51RIwMuw2SXd0fk9tnt5S1BVXCCI00JaY35k76', '2019-07-17', 'admin', NULL),
+(3, 'Antonio', 'López Quesada', 'antonio@antonio.com', '$2y$04$UQBesGzVzpF3SlTGl39lcOzkx9IpiN6lMJoTgrYt1dwPknwkEyep.', '2019-07-28', 'admin', NULL),
+(4, 'Mario', 'Santillán Pérez', 'mario@mario.com', '$2y$04$8lLE4CD96Al2ACj85yGVSehTbCOG3438y32cdREgUoXAz0yEXkz/u', '2019-07-28', 'admin', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -122,7 +133,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `peticiones`
 --
 ALTER TABLE `peticiones`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `redes`
@@ -134,7 +145,7 @@ ALTER TABLE `redes`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
