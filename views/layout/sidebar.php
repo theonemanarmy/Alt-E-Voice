@@ -69,6 +69,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="<?= url_project ?>peticiones/verForm">
+                <i class="fas fa-book-open"></i>
+                <span>Insertar peticiones</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>usuario/logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Cerrar Sesión</span>

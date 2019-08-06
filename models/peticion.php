@@ -78,4 +78,16 @@ class Petition{
 
         return $petitions;
     }
+
+    public function insert(){
+        $sql = "INSERT INTO peticiones VALUES(null, {$this->getUsuario_id()}, '{$this->getTexto()}', CURRENT_TIMESTAMP);";
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if($save){
+            $result = true;
+        }
+
+        return $result;
+    }
 }
