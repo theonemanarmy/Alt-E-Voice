@@ -30,9 +30,9 @@ class peticionesController
     public function insertar()
     {
         Utils::isIdentity();
-        if(isset($_POST)){
+        if(isset($_GET['text'])){
             $usuario_id = $_SESSION['identity']->id;
-            $text = $_POST['text'];
+            $text = $_GET['text'];
 
             $pet = new Petition();
             $pet->setUsuario_id($usuario_id);
@@ -50,5 +50,22 @@ class peticionesController
         
     } //función insertar
 
+    public function delete(){
+        Utils::isIdentity();
 
-}
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            $pet = new Petition();
+            $pet->setId($id);
+            $pet = $pet->delete();
+
+            if($pet){
+                $_SESSION['delete-pet'] = "complete";
+            }else{
+                $_SESSION['delete-pet'] = "failed";
+            }
+        }
+
+        header("Location:".url_project."peticiones/ver");
+    }
+}//termina peticionesController

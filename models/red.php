@@ -70,5 +70,17 @@ class Network{
         $networks = $this->db->query($sql);
 
         return $networks;
+    }//termina función de obtener todo
+
+    public function delete(){
+        $sql = "DELETE FROM redes WHERE id = {$this->id}";
+        $deleted = $this->db->query($sql);
+    
+        $result = false;
+        if($deleted){
+            $result = true;
+        }
+
+        return $result;
     }
-}
+}//termina clase

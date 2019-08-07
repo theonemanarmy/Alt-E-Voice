@@ -90,4 +90,16 @@ class Petition{
 
         return $result;
     }
+
+    public function delete(){
+        $sql = "DELETE FROM peticiones WHERE id = {$this->id}";
+        $deleted = $this->db->query($sql);
+    
+        $result = false;
+        if($deleted){
+            $result = true;
+        }
+
+        return $result;
+    }
 }

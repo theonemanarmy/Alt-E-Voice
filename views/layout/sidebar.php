@@ -7,7 +7,7 @@
         <?php endif; ?>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= url_project ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
@@ -68,12 +68,12 @@
                 <span>Manual de uso</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>peticiones/verForm">
                 <i class="fas fa-book-open"></i>
                 <span>Insertar peticiones</span>
             </a>
-        </li>
+        </li>-->
         <li class="nav-item">
             <a class="nav-link" href="<?= url_project ?>usuario/logout">
                 <i class="fas fa-sign-out-alt"></i>

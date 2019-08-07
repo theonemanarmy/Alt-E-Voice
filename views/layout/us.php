@@ -9,7 +9,7 @@
       <img src="<?=url_project?>assets/images/header-principal.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <a href="#">
+      <a href="https://www.mediafire.com/file/mqhl3o3cfjfgo4l/Alt_E-voice_1.0.apk/file" target="_blank">
         <img src="<?=url_project?>assets/images/DescargaApp.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>¡Da click aquí para descargar!</h5>
